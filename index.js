@@ -21,17 +21,21 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // create a new list item
+    // creating a new list item
     const li = document.createElement("li");
 
-    // add text to the list item
-    li.textContent = task;
+    // creating a span (IMPORTANT for tests)
+    const span = document.createElement("span");
+    span.textContent = task;
 
-    // add it to the list
+    // appending span to li
+    li.appendChild(span);
+
+    // adding it to the list
     const ul = document.getElementById("tasks");
     ul.appendChild(li);
 
-    // clear input field
+    // clearing input field
     input.value = "";
 
   });
